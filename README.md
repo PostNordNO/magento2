@@ -11,7 +11,7 @@ This module integrates [PostNord](https://postnord.no) with Magento 2.
 ## Install
 
 ```bash 
-composer require postnord/magento2
+composer require postnordno/magento2
 
 bin/magento module:enable PostNord_Magento2
 
@@ -22,6 +22,6 @@ bin/magento cache:clean
 
 ## Setup
 
-- Create developer account [PostNord Developer Portal](https://developer.postnord.no/)
+- Create developer account [PostNord Developer Portal](https://developer.postnord.no)
 - Go to Stores -> Configurations -> Sales -> Delivery Methods -> PostNord
 - Fill inn the credentials and save
