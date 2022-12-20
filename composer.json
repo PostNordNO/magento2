@@ -18,6 +18,7 @@
         "guzzlehttp/guzzle": ">=5.0"
     },
     "license": [
+        "MIT"
     ],
     "autoload": {
         "files": [
