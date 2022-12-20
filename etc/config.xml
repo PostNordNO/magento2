@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <postnord>
+                <active>0</active>
+                <test_mode>0</test_mode>
+                <sort_order>15</sort_order>
+                <model>PostNordNO\Magento2\Model\Carrier\PostNord</model>
+            </postnord>
+        </carriers>
+    </default>
+</config>
