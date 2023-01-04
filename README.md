@@ -1,4 +1,4 @@
-# PostNord for Magento 2
+# PostNordNO for Magento 2
 
 This module integrates [PostNord](https://postnord.no) with Magento 2.
 
@@ -13,7 +13,7 @@ This module integrates [PostNord](https://postnord.no) with Magento 2.
 ```bash 
 composer require postnordno/magento2
 
-bin/magento module:enable PostNord_Magento2
+bin/magento module:enable PostNordNO_Magento2
 
 bin/magento setup:upgrade
 
