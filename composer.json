@@ -2,14 +2,13 @@
     "name": "postnordno/magento2",
     "description": "Magento 2 shipping module for PostNordNO",
     "type": "magento2-module",
+    "version": "1.0.9",
     "require": {
         "php": "^7.4",
         "magento/framework": "103.0.*",
         "guzzlehttp/guzzle": ">=5.0"
     },
-    "license": [
-        "MIT"
-    ],
+    "license": "MIT",
     "autoload": {
         "files": [
             "registration.php"
