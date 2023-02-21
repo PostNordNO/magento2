@@ -401,7 +401,7 @@ class PostNord extends AbstractCarrier implements CarrierInterface
                     foreach ($product->pickupPoints as $pickupPoint) {
                         $products[$product->code.'_'.$pickupPoint->customerId] = [
                             'title' => 'PostNord',
-                            'cost' => $price * 1.25,
+                            'cost' => $price,
                             'code' => $pickupPoint->customerId,
                             'method' => $product->name .': ' .$pickupPoint->name . ' ('. $pickupPoint->customerId . ')'
                         ];
@@ -409,7 +409,7 @@ class PostNord extends AbstractCarrier implements CarrierInterface
                 } else {
                     $products[$product->code] = [
                         'title' => 'PostNord',
-                        'cost' => $price * 1.25,
+                        'cost' => $price,
                         'code' => $product->code,
                         'method' => $product->name
                     ];
