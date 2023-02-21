@@ -2,7 +2,7 @@
     "name": "postnordno/magento2",
     "description": "Magento 2 shipping module for PostNordNO",
     "type": "magento2-module",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "require": {
         "php": "^7.4|^8.0|^8.1|^8.2",
         "magento/framework": "103.0.*",
