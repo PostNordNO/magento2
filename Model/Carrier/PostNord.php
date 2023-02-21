@@ -107,10 +107,10 @@ class PostNord extends AbstractCarrier implements CarrierInterface
 
         $recipient_street_address = $request->getDestStreet();
         $recipient_address_line = explode(PHP_EOL, $recipient_street_address);
-        $recipient_address1 = !empty($recipient_address_line[0]) ? $recipient_address_line[0] : $recipient_street_address;
-        $recipient_address2 = !empty($recipient_address_line[1]) ? $recipient_address_line[1] : '';
+        $recipient_address1 = !empty($recipient_address_line[0]) ? $recipient_address_line[0] : 'Street 1';
+        $recipient_address2 = !empty($recipient_address_line[1]) ? $recipient_address_line[1] : 'Street 2';
         $recipient_zip = $request->getDestPostcode();
-        $recipient_city = $request->getDestCity();
+        $recipient_city = !empty($request->getDestCity()) ? $request->getDestCity() : 'Cityname';
         $recipient_country_code = $request->getDestCountryId();
         $package_weight = $request->getPackageWeight();
         $sender_address1 = $this->getStoreStreetLine1();
@@ -401,7 +401,7 @@ class PostNord extends AbstractCarrier implements CarrierInterface
                     foreach ($product->pickupPoints as $pickupPoint) {
                         $products[$product->code.'_'.$pickupPoint->customerId] = [
                             'title' => 'PostNord',
-                            'cost' => $price * 1.25,
+                            'cost' => $price,
                             'code' => $pickupPoint->customerId,
                             'method' => $product->name .': ' .$pickupPoint->name . ' ('. $pickupPoint->customerId . ')'
                         ];
@@ -409,7 +409,7 @@ class PostNord extends AbstractCarrier implements CarrierInterface
                 } else {
                     $products[$product->code] = [
                         'title' => 'PostNord',
-                        'cost' => $price * 1.25,
+                        'cost' => $price,
                         'code' => $product->code,
                         'method' => $product->name
                     ];
