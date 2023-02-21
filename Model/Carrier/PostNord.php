@@ -107,10 +107,10 @@ class PostNord extends AbstractCarrier implements CarrierInterface
 
         $recipient_street_address = $request->getDestStreet();
         $recipient_address_line = explode(PHP_EOL, $recipient_street_address);
-        $recipient_address1 = !empty($recipient_address_line[0]) ? $recipient_address_line[0] : 'Gate 1';
-        $recipient_address2 = !empty($recipient_address_line[1]) ? $recipient_address_line[1] : 'Gate 2';
+        $recipient_address1 = !empty($recipient_address_line[0]) ? $recipient_address_line[0] : 'Street 1';
+        $recipient_address2 = !empty($recipient_address_line[1]) ? $recipient_address_line[1] : 'Street 2';
         $recipient_zip = $request->getDestPostcode();
-        $recipient_city = !empty($request->getDestCity()) ? $request->getDestCity() : 'Stedsnavn';
+        $recipient_city = !empty($request->getDestCity()) ? $request->getDestCity() : 'Cityname';
         $recipient_country_code = $request->getDestCountryId();
         $package_weight = $request->getPackageWeight();
         $sender_address1 = $this->getStoreStreetLine1();
